@@ -4081,7 +4081,7 @@
 			"Name": "RichTextBox",
 			"Transform": {
 				"Translation": {
-					"X": 495.86627197265627,
+					"X": 473.5712890625,
 					"Y": 20.0,
 					"Z": 0.0
 				}
@@ -4206,7 +4206,7 @@
 			"Name": "StarImage",
 			"Transform": {
 				"Translation": {
-					"X": 493.0,
+					"X": 367.0,
 					"Y": 0.0,
 					"Z": 0.0
 				}
@@ -4257,7 +4257,7 @@
 		"Y": 0.0
 	},
 	"Offsets": {
-		"Left": 493.0,
+		"Left": 367.0,
 		"Right": 64.0,
 		"Top": 0.0,
 		"Bottom": 64.0
