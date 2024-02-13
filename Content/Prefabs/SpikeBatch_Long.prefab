@@ -1,0 +1,857 @@
+{
+	"ID": "69a21aee4f4d9c3707065db1824b7d8a",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6407,
+	"Data": [
+	{
+		"ID": "d019023d4e05860a517200b8a72f26a4",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "00000000000000000000000000000000",
+		"Name": "SpikeBatch 0",
+		"Transform": {
+			"Translation": {
+				"X": 625.0,
+				"Y": 0.0,
+				"Z": 3355.0
+			}
+		}
+	},
+	{
+		"ID": "793ec9c540704f3d09f8db92c3e16992",
+		"TypeName": "Game.Spikes",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"V": {
+			"thisCollider": "8ecd12ea453a30aa1aabd4ba38876e5b"
+		}
+	},
+	{
+		"ID": "414d305244b7220476bc388accb56556",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_1",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": -11.645320892333985,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "d86a73d94e7ef7de9a38af91803933c6",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_17",
+		"Transform": {
+			"Translation": {
+				"X": 76.125,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "809b45f74c06c9e0ade55092c42c15d2",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_18",
+		"Transform": {
+			"Translation": {
+				"X": -76.125,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "d6fbd903451106dff6b89b8cb784fa2c",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_2",
+		"Transform": {
+			"Translation": {
+				"X": -76.125,
+				"Y": -11.645320892333985,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "003eb35b47a6f27dcc3639b865d2548e",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_3",
+		"Transform": {
+			"Translation": {
+				"X": 76.125,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "efd0776d4b53daa0952d93bf0694602b",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_4",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "92d955bd40d2d73558aea79316b863f1",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_5",
+		"Transform": {
+			"Translation": {
+				"X": 76.125,
+				"Y": -11.645320892333985,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "f77789d3446b6f0e5cf4c590bf4edd2f",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_6",
+		"Transform": {
+			"Translation": {
+				"X": -76.125,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "3520da3b4bf8a24fe2716c9319f1fd3f",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_7",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "5a35b2a3459213a9e3d2d0a3113476ab",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_8",
+		"Transform": {
+			"Translation": {
+				"X": 228.375,
+				"Y": -11.645320892333985,
+				"Z": 0.0
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": 0.7071068286895752,
+				"Z": 0.0,
+				"W": 0.7071068286895752
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "00255a224e8d4d3baf035d8d907fa450",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_9",
+		"Transform": {
+			"Translation": {
+				"X": 304.5,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "f507974f43fa293164e30d88e157eaf2",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_10",
+		"Transform": {
+			"Translation": {
+				"X": 152.25,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "9514ee084c74491510f89b86fbc73d89",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_11",
+		"Transform": {
+			"Translation": {
+				"X": 152.25,
+				"Y": -11.645320892333985,
+				"Z": -76.125
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": 0.7071068286895752,
+				"Z": 0.0,
+				"W": 0.7071068286895752
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "d2f0c8d149a30861066a50a4da72931f",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_12",
+		"Transform": {
+			"Translation": {
+				"X": 304.5,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "63588f1144516cca38f5c2b43ecd23c7",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_13",
+		"Transform": {
+			"Translation": {
+				"X": 228.375,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": 0.7071068286895752,
+				"Z": 0.0,
+				"W": 0.7071068286895752
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "8249d0744c7006a307ee8793456238ee",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_14",
+		"Transform": {
+			"Translation": {
+				"X": 304.5,
+				"Y": -11.645320892333985,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "fd9b5e57480e7b145c6f808ffd5c6c86",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_15",
+		"Transform": {
+			"Translation": {
+				"X": 152.25,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "0dd9d4e549a0ebfb4e99e8beab68fbcc",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_16",
+		"Transform": {
+			"Translation": {
+				"X": 228.375,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "6403c54b4cc834dcd6378d8559fd22a9",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_19",
+		"Transform": {
+			"Translation": {
+				"X": -228.375,
+				"Y": -11.645320892333985,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "2e44dd624385d296addf939fcdc658ee",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_20",
+		"Transform": {
+			"Translation": {
+				"X": -152.25,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "20ba41974c6acb6238e2c9aa9d201e26",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_21",
+		"Transform": {
+			"Translation": {
+				"X": -304.5,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "f14a2df048ced7ba685d2ea63431017f",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_22",
+		"Transform": {
+			"Translation": {
+				"X": -304.5,
+				"Y": -11.645320892333985,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "8574fb354a766c5a48c0bc93134c5f43",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_23",
+		"Transform": {
+			"Translation": {
+				"X": -152.25,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "84b592eb4e94698563695b8d7d21f2b9",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_24",
+		"Transform": {
+			"Translation": {
+				"X": -228.375,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": -0.7071068286895752,
+				"Z": 0.0,
+				"W": 0.7071068286895752
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "0c48dd6041bf5ffec6b3ed84cab03a63",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_25",
+		"Transform": {
+			"Translation": {
+				"X": -152.25,
+				"Y": -11.645320892333985,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "feff5a57429317de022e818c0986ce9c",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_26",
+		"Transform": {
+			"Translation": {
+				"X": -304.5,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Orientation": {
+				"X": 0.0,
+				"Y": 0.7071068286895752,
+				"Z": 0.0,
+				"W": 0.7071068286895752
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "c099ef9c470d35a913f3cdad8814725f",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "spikes_27",
+		"Transform": {
+			"Translation": {
+				"X": -228.375,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "8ecd12ea453a30aa1aabd4ba38876e5b",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "d019023d4e05860a517200b8a72f26a4",
+		"Name": "BoxCollider",
+		"Center": {
+			"X": 0.0,
+			"Y": 14.80290412902832,
+			"Z": -0.0001220703125
+		},
+		"Size": {
+			"X": 684.3003540039063,
+			"Y": 52.89652633666992,
+			"Z": 227.5504150390625
+		}
+	}
+]
+}

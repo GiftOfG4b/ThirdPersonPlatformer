@@ -1,0 +1,305 @@
+{
+	"ID": "016c68174a49e7534e116bab1c2d6450",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6407,
+	"Data": [
+	{
+		"ID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "00000000000000000000000000000000",
+		"Name": "SpikeBatch",
+		"Transform": {
+			"Translation": {
+				"X": 625.0,
+				"Y": 0.0,
+				"Z": 3355.0
+			}
+		}
+	},
+	{
+		"ID": "4351dce84e8e9611fdcbd8bf4c8de875",
+		"TypeName": "Game.Spikes",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"V": {
+			"thisCollider": "40bff5e54b49d438a8bca2b05aee2edc"
+		}
+	},
+	{
+		"ID": "ddb208f24291525f74d88cbffc2ac2ed",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_01",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": -11.645320892333985,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "25327f9446c2d91595595d8cad06b714",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_02",
+		"Transform": {
+			"Translation": {
+				"X": 76.125,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "8b7c306c4ab7feab9047d99c6849ebb7",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_03",
+		"Transform": {
+			"Translation": {
+				"X": -76.125,
+				"Y": -11.645350456237792,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "a27374664148640e4be066939437ab86",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_2",
+		"Transform": {
+			"Translation": {
+				"X": -76.125,
+				"Y": -11.645320892333985,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "0f31759740d10a1155fbbd965d50c79d",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_3",
+		"Transform": {
+			"Translation": {
+				"X": 76.125,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "908941954586bbf0235ddea978d45fee",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_4",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": -11.645350456237792,
+				"Z": -76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "65fd37df40ddedbf704cbd8fe58324a3",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_5",
+		"Transform": {
+			"Translation": {
+				"X": 76.125,
+				"Y": -11.645320892333985,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "803e3da24b39f2ceb2e8f1b4d5d40cf0",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "feff688544790f5ebea19aba85cfa91c",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_6",
+		"Transform": {
+			"Translation": {
+				"X": -76.125,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "bd7601dd4ebac13136dce4827adf099f",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "e7d9201e4b2c00364b151dbc8a39c782",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "spikes_7",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": -11.645350456237792,
+				"Z": 76.125
+			},
+			"Scale": {
+				"X": 2.0,
+				"Y": 2.0,
+				"Z": 2.0
+			}
+		},
+		"Model": "f6396e554cd6909dcd60ed8f03d9523d",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "382f1ae946c519eff6e6f3a2965cf56b",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "40bff5e54b49d438a8bca2b05aee2edc",
+		"TypeName": "FlaxEngine.BoxCollider",
+		"ParentID": "243314994d7dd2d8cb927dac2e7ccc90",
+		"Name": "BoxCollider",
+		"Center": {
+			"X": 0.0,
+			"Y": 14.80290412902832,
+			"Z": 0.0
+		},
+		"Size": {
+			"X": 227.5504150390625,
+			"Y": 52.89652633666992,
+			"Z": 227.55029296875
+		}
+	}
+]
+}

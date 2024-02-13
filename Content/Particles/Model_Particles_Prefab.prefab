@@ -1,0 +1,23 @@
+{
+	"ID": "d6b04a7547b6745c43845eac9143de06",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6407,
+	"Data": [
+	{
+		"ID": "25f6a5034fc6d3dd4ec5ea9822d079ad",
+		"TypeName": "FlaxEngine.ParticleEffect",
+		"ParentID": "00000000000000000000000000000000",
+		"Name": "Particles",
+		"Transform": {
+			"Translation": {
+				"X": 14.291015625,
+				"Y": 0.0,
+				"Z": -181.35922241210936
+			}
+		},
+		"StaticFlags": 0,
+		"Overrides": [],
+		"ParticleSystem": "d78bbb874c4e25b7dab1d78ef691beb3"
+	}
+]
+}
