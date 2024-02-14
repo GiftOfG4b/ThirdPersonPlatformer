@@ -15,9 +15,9 @@ public class ScoreShow : Script
     int score = 0;//player score/ number of stars found
 
     [Tooltip("Reference to the player score visual control")]
-    public UIControl ControlVisual { get; set; }
+    public UIControl controlVisual { get; set; }
 
-    public Label scoreRender;
+    RichTextBox scoreRender;
 
     //public delegate void Increase(int amount); //normally followed by static Increase increase;
     public static Action<int> increase;//delegate with no return type and int parameter
@@ -27,6 +27,8 @@ public class ScoreShow : Script
     public override void OnStart()
     {
         // Here you can add code that needs to be called when script is created, just before the first game update
+        Debug.Log( controlVisual.Control);
+        scoreRender = (RichTextBox) controlVisual.Control;
     }
     
     /// <inheritdoc/>
@@ -48,6 +50,6 @@ public class ScoreShow : Script
 
     void ScoreChange(int pickupAmount){
         score += pickupAmount;
-        scoreRender.Text = score.ToString();//?how to do
+        scoreRender.Text = ": "+ score.ToString();//?how to do
     }
 }

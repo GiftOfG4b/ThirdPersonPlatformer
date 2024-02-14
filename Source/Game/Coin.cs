@@ -12,7 +12,7 @@ public class Coin : Script
     int value = 1; //each coin == 1
 
     Actor coinTarget;
-    public TriggerSample button;
+    public TriggerSample triggerArea;
 
     //pro: if each coin hooked up directly to a score class, could easily make a coin total
 
@@ -29,14 +29,14 @@ public class Coin : Script
     /// <inheritdoc/>
     public override void OnEnable()
     {
-        button.triggered += OnEntered;
+        triggerArea.triggered += OnEntered;
         // Here you can add code that needs to be called when script is enabled (eg. register for events)
     }
 
     /// <inheritdoc/>
     public override void OnDisable()
     {
-        button.triggered -= OnEntered;
+        triggerArea.triggered -= OnEntered;
         // Here you can add code that needs to be called when script is disabled (eg. unregister from events)
     }
 

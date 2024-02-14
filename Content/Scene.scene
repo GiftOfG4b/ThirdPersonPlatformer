@@ -4056,6 +4056,14 @@
 			]
 		},
 		{
+			"ID": "cb413eaa47fa7ed44e523aab12ecbb0e",
+			"TypeName": "Game.Coin",
+			"ParentID": "2cc27919497714578a1d8ca00e0421e7",
+			"V": {
+	"triggerArea": "197d5d2642e4560bf17362bcada29d0f"
+}
+		},
+		{
 			"ID": "d2ef35124b6688d3841b5c90d06b85a3",
 			"TypeName": "FlaxEngine.SceneAnimationPlayer",
 			"ParentID": "2cc27919497714578a1d8ca00e0421e7",
@@ -4063,6 +4071,29 @@
 			"Animation": "bc3671a9448e83da8eedc5bf1ddba02b",
 			"Loop": true,
 			"PlayOnStart": true
+		},
+		{
+			"ID": "e6aa926a435cfee10194cc89898c0b80",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "2cc27919497714578a1d8ca00e0421e7",
+			"Name": "BoxCollider",
+			"IsTrigger": true,
+			"Center": {
+				"X": 0.0,
+				"Y": 1.9273681640625,
+				"Z": 0.0
+			},
+			"Size": {
+				"X": 38.3917236328125,
+				"Y": 36.512725830078128,
+				"Z": 8.0
+			}
+		},
+		{
+			"ID": "197d5d2642e4560bf17362bcada29d0f",
+			"TypeName": "Game.TriggerSample",
+			"ParentID": "e6aa926a435cfee10194cc89898c0b80",
+			"V": {}
 		},
 		{
 			"ID": "690c6ea146f076fe591f49832fc67c94",
@@ -4075,13 +4106,21 @@
 }
 		},
 		{
+			"ID": "4111d4874c36785e9a184ca4e1708a37",
+			"TypeName": "Game.ScoreShow",
+			"ParentID": "690c6ea146f076fe591f49832fc67c94",
+			"V": {
+	"controlVisual": "58601b2c4addee6e17dc139875a2b141"
+}
+		},
+		{
 			"ID": "58601b2c4addee6e17dc139875a2b141",
 			"TypeName": "FlaxEngine.UIControl",
 			"ParentID": "690c6ea146f076fe591f49832fc67c94",
 			"Name": "RichTextBox",
 			"Transform": {
 				"Translation": {
-					"X": 473.5712890625,
+					"X": 495.86627197265627,
 					"Y": 20.0,
 					"Z": 0.0
 				}

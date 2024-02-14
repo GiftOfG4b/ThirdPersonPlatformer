@@ -10,7 +10,12 @@ namespace Game;
 /// </summary>
 public class PercentageController : Script
 {
-    Actor hingeRotated;
+    public Actor hingeRotated;
+
+    HingeJoint hingeJoint;
+
+    SliderJoint sliderJoint;
+
     public float maxAngle;
     public float angle;
     public float gearRatio;//percentage = angle*gearRatio
