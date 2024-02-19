@@ -74,6 +74,8 @@ public class CoinBlock : Script
             starParticles.Parameters[0].Value = -collisionDir*800f;
             starParticles.Play();
             
+            //square glow scale up effect (particle)
+
         }
     }
 

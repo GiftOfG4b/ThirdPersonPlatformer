@@ -20,23 +20,27 @@ public class MovingPlatform : Script
     public Actor pathHolder;
 
     int prevWaypointIndex;
-    int targetWaypointIndex;
+    public int targetWaypointIndex = 0;
     Vector3 targetWaypoint;
-    Vector3 prevWayPoint;
+    public Vector3 prevWayPoint;
 
     /// <inheritdoc/>
     public override void OnStart()
     {   
         time = 0;
         
-        targetWaypointIndex = 0;
+        
                 
         waypoints = new Vector3[pathHolder.ChildrenCount];
 
         for (int i = 0; i< waypoints.Length; i++){
             waypoints[i] = pathHolder.GetChild(i).Position;
         }
+        
+        
         prevWayPoint = platformActor.Position;
+        
+        
         targetWaypoint = waypoints[targetWaypointIndex];
         //timeToReach=1;
     }
@@ -45,6 +49,7 @@ public class MovingPlatform : Script
     public override void OnEnable()
     {
         // Here you can add code that needs to be called when script is enabled (eg. register for events)
+        
     }
 
     /// <inheritdoc/>

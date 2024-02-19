@@ -11,7 +11,7 @@ namespace Game;
 public class ScoreShow : Script
 {
     [Tooltip("The current level max score")]
-    public int totalScore{ get; set; }
+    public int TotalScore{ get; set; }
     int score = 0;//player score/ number of stars found
 
     [Tooltip("Reference to the player score visual control")]
@@ -27,7 +27,7 @@ public class ScoreShow : Script
     public override void OnStart()
     {
         // Here you can add code that needs to be called when script is created, just before the first game update
-        Debug.Log( controlVisual.Control);
+        //Debug.Log( controlVisual.Control);
         scoreRender = (RichTextBox) controlVisual.Control;
     }
     
@@ -39,6 +39,10 @@ public class ScoreShow : Script
         //score events needs to be global 
         increase += ScoreChange;
     }
+
+
+    
+
 
     /// <inheritdoc/>
     public override void OnDisable()

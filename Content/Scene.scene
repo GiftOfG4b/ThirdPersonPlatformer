@@ -1094,7 +1094,8 @@
 			"ParentID": "215d210043309cd51caa1d9a415f38f6",
 			"V": {
 	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
-	"platformHolder": "0701532b4c12e03e2d2fb08fb0848f11"
+	"platformHolder": "0701532b4c12e03e2d2fb08fb0848f11",
+	"firstStartTime": 1.0
 }
 		},
 		{
@@ -1200,9 +1201,9 @@
 			"Name": "MovingPlatform 1",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": -1500.0,
+					"Y": 725.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1228,9 +1229,14 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "61165d7a49a58aa8e7c99a908210f0a1",
 			"V": {
-	"timeToReach": 0.25,
+	"timeToReach": 3.625,
 	"platformActor": "61165d7a49a58aa8e7c99a908210f0a1",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"prevWayPoint": {
+		"X": -1500.0,
+		"Y": 1350.0,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
@@ -1247,9 +1253,9 @@
 			"Name": "MovingPlatform 2",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": -1287.5,
+					"Y": 0.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1275,9 +1281,15 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "71027f064e9765b6fe4f729710a567f9",
 			"V": {
-	"timeToReach": 5.25,
+	"timeToReach": 13.9375,
 	"platformActor": "71027f064e9765b6fe4f729710a567f9",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"targetWaypointIndex": 1,
+	"prevWayPoint": {
+		"X": -1312.5,
+		"Y": 600.0,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
@@ -1294,9 +1306,9 @@
 			"Name": "MovingPlatform 3",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": -350.0,
+					"Y": 0.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1322,9 +1334,15 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "ab3b5ec24224301aefd2afbaf78ad4a0",
 			"V": {
-	"timeToReach": 10.25,
+	"timeToReach": 9.25,
 	"platformActor": "ab3b5ec24224301aefd2afbaf78ad4a0",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"targetWaypointIndex": 1,
+	"prevWayPoint": {
+		"X": -375.0,
+		"Y": 600.0,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
@@ -1341,9 +1359,9 @@
 			"Name": "MovingPlatform 4",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": 587.5,
+					"Y": 0.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1369,9 +1387,15 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "fcae05b349c763e49a2c8abdaf845a6e",
 			"V": {
-	"timeToReach": 15.25,
+	"timeToReach": 4.5625,
 	"platformActor": "fcae05b349c763e49a2c8abdaf845a6e",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"targetWaypointIndex": 1,
+	"prevWayPoint": {
+		"X": 562.5,
+		"Y": 600.0,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
@@ -1388,9 +1412,9 @@
 			"Name": "MovingPlatform 5",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": 1500.0,
+					"Y": 25.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1416,9 +1440,15 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "e8b4e98a4a7d9f8ed4bc2dad9491a2aa",
 			"V": {
-	"timeToReach": 20.25,
+	"timeToReach": 3.625,
 	"platformActor": "e8b4e98a4a7d9f8ed4bc2dad9491a2aa",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"targetWaypointIndex": 2,
+	"prevWayPoint": {
+		"X": 1500.0,
+		"Y": 600.0,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
@@ -1435,9 +1465,9 @@
 			"Name": "MovingPlatform 6",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": 1287.5,
+					"Y": 750.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1463,9 +1493,15 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "4895bad548d504c9308edf923ea334ef",
 			"V": {
-	"timeToReach": 25.25,
+	"timeToReach": 13.9375,
 	"platformActor": "4895bad548d504c9308edf923ea334ef",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"targetWaypointIndex": 3,
+	"prevWayPoint": {
+		"X": 1500.0,
+		"Y": 1537.5,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
@@ -1482,9 +1518,9 @@
 			"Name": "MovingPlatform 7",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": 350.0,
+					"Y": 750.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1510,9 +1546,15 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "92197b79433acbcc630a059f4a56bddf",
 			"V": {
-	"timeToReach": 30.25,
+	"timeToReach": 9.25,
 	"platformActor": "92197b79433acbcc630a059f4a56bddf",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"targetWaypointIndex": 3,
+	"prevWayPoint": {
+		"X": 375.0,
+		"Y": 1350.0,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
@@ -1529,9 +1571,9 @@
 			"Name": "MovingPlatform 8",
 			"Transform": {
 				"Translation": {
-					"X": -1525.4310302734376,
-					"Y": 9.14483642578125,
-					"Z": -11.822265625
+					"X": -587.5,
+					"Y": 750.0,
+					"Z": 0.0
 				},
 				"Scale": {
 					"X": 4.0,
@@ -1557,9 +1599,15 @@
 			"TypeName": "Game.MovingPlatform",
 			"ParentID": "163739ac4e9571156c0a338a8e805cdf",
 			"V": {
-	"timeToReach": 35.25,
+	"timeToReach": 4.5625,
 	"platformActor": "163739ac4e9571156c0a338a8e805cdf",
-	"pathHolder": "860caa724fb5de668397f7b01b7d1c39"
+	"pathHolder": "860caa724fb5de668397f7b01b7d1c39",
+	"targetWaypointIndex": 3,
+	"prevWayPoint": {
+		"X": -562.5,
+		"Y": 1350.0,
+		"Z": 6055.3896
+	}
 }
 		},
 		{
