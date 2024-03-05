@@ -79,6 +79,7 @@ public class CheeseBounce : Script
         //rigidBody.Constraints = RigidbodyConstraints.LockAll;
         //rigidBody.IsKinematic = true;
         //Debug.Log("iskinematic: " + rigidBody.IsKinematic);
+        this.Enabled = false;
         dead = true;
     }
 
@@ -91,10 +92,10 @@ public class CheeseBounce : Script
         //Physics.SphereCast(...)
         //when hits do collision
 
-        if (dead)
-        {
-            return;
-        }
+        // if (dead)
+        // {
+        //     return;
+        // }
 
         Vector3 avgNormal = Vector3.Zero;
         foreach (var contact in collision.Contacts)
@@ -222,10 +223,10 @@ public class CheeseBounce : Script
 
         // Character Movement
         {
-            if (dead)
-            {
-                return;
-            }
+            // if (dead)
+            // {
+            //     return;
+            // }
             // Get input axes
             var inputH = Input.GetAxis("Horizontal");
             var inputV = Input.GetAxis("Vertical");
