@@ -102,7 +102,7 @@
 			"Target": "bfcf5e5d49b546e38b2220b0dcd17198",
 			"EnableCollision": false,
 			"EnableAutoAnchor": true,
-			"Flags": 1,
+			"Flags": 0,
 			"Restitution": 0.25,
 			"Stiffness": 100000.0,
 			"Damping": 25000.0,
@@ -123,8 +123,9 @@
 			},
 			"StaticFlags": 0,
 			"Mass": 20.0,
-			"AngularDamping": 0.5,
-			"MaxAngularVelocity": 10.0
+			"AngularDamping": 1.0,
+			"MaxAngularVelocity": 10.0,
+			"MassScale": 4.0
 		},
 		{
 			"ID": "71952fdb4f7993b160d8aa8340662ebd",
@@ -702,109 +703,9 @@
 			"Transform": {
 				"Translation": {
 					"X": -368.037353515625,
-					"Y": 400.0,
+					"Y": 550.0,
 					"Z": 4693.77783203125
 				}
-			}
-		},
-		{
-			"ID": "57e791164c50a8f0001ad598b851ad5a",
-			"PrefabID": "d2e6df3843d12ebf0e7fa2b33c15826f",
-			"PrefabObjectID": "52b4dda447945310e936b38fe4f611d5",
-			"ParentID": "f79c3440491c14c2a3ca018c14a5776a",
-			"Name": "PhysicsCube 1",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": 0.0,
-					"Z": 500.0
-				}
-			},
-			"StaticFlags": 0,
-			"Mass": 12.0,
-			"AngularDamping": 0.5,
-			"MaxAngularVelocity": 20.0
-		},
-		{
-			"ID": "83a7e3e748b73727393bc5b3d8eb699c",
-			"PrefabID": "d2e6df3843d12ebf0e7fa2b33c15826f",
-			"PrefabObjectID": "253a4fa54eabf286ee1925b2b02cdab5",
-			"ParentID": "57e791164c50a8f0001ad598b851ad5a",
-			"StaticFlags": 0,
-			"Size": {
-				"X": 200.0,
-				"Y": 100.0,
-				"Z": 400.0
-			}
-		},
-		{
-			"ID": "b01175d148ad2cbe3428609f0091d0a7",
-			"PrefabID": "d2e6df3843d12ebf0e7fa2b33c15826f",
-			"PrefabObjectID": "90e75a0345a52328142e258f34e10246",
-			"ParentID": "57e791164c50a8f0001ad598b851ad5a",
-			"Transform": {
-				"Scale": {
-					"X": 2.0,
-					"Y": 1.0,
-					"Z": 4.0
-				}
-			},
-			"StaticFlags": 0,
-			"DrawModes": 95,
-			"Buffer": {
-				"Entries": [
-					{}
-				]
-			}
-		},
-		{
-			"ID": "66f8cc144c2cefabde5878898a2a837d",
-			"PrefabID": "d2e6df3843d12ebf0e7fa2b33c15826f",
-			"PrefabObjectID": "52b4dda447945310e936b38fe4f611d5",
-			"ParentID": "f79c3440491c14c2a3ca018c14a5776a",
-			"Name": "PhysicsCube 2",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": 0.0,
-					"Z": -500.0
-				}
-			},
-			"StaticFlags": 0,
-			"Mass": 12.0,
-			"AngularDamping": 0.5,
-			"MaxAngularVelocity": 20.0
-		},
-		{
-			"ID": "3523fc3c4e2cf59b10d4388a719138eb",
-			"PrefabID": "d2e6df3843d12ebf0e7fa2b33c15826f",
-			"PrefabObjectID": "253a4fa54eabf286ee1925b2b02cdab5",
-			"ParentID": "66f8cc144c2cefabde5878898a2a837d",
-			"StaticFlags": 0,
-			"Size": {
-				"X": 200.0,
-				"Y": 100.0,
-				"Z": 400.0
-			}
-		},
-		{
-			"ID": "1067fff244bb752304e555b9c41f5875",
-			"PrefabID": "d2e6df3843d12ebf0e7fa2b33c15826f",
-			"PrefabObjectID": "90e75a0345a52328142e258f34e10246",
-			"ParentID": "66f8cc144c2cefabde5878898a2a837d",
-			"Transform": {
-				"Scale": {
-					"X": 2.0,
-					"Y": 1.0,
-					"Z": 4.0
-				}
-			},
-			"StaticFlags": 0,
-			"DrawModes": 95,
-			"Buffer": {
-				"Entries": [
-					{}
-				]
 			}
 		},
 		{
@@ -813,26 +714,24 @@
 			"ParentID": "f79c3440491c14c2a3ca018c14a5776a",
 			"Name": "HingeHingeCenter",
 			"StaticFlags": 0,
-			"Mass": 125.00000762939453,
 			"IsKinematic": true,
 			"EnableGravity": false
 		},
 		{
-			"ID": "6d45b5a1426a46010d71db83f405ea31",
-			"TypeName": "FlaxEngine.BoxCollider",
+			"ID": "f4d4e2a04649ad23c3fa8fbc52fe1472",
+			"TypeName": "Game.FakeHinge",
 			"ParentID": "0fa36ba044548c845a157f95763acaba",
-			"Name": "BoxCollider",
-			"StaticFlags": 0,
-			"Center": {
-				"X": 0.0,
-				"Y": 0.0000152587890625,
-				"Z": 0.0
-			},
-			"Size": {
-				"X": 50.0,
-				"Y": 50.0,
-				"Z": 50.0
-			}
+			"V": {
+	"hingeRigidBody": "a13c8d1b4410b0e753f90c89c2b62a31",
+	"colliders": [
+		"7d2e2b7244db07b31fe2c0b132861be5",
+		"53e2645a402e5ee08d075584f43e7052"
+	],
+	"insideActors": [
+		"28c210d7426f40e15a4a86b4907677ef",
+		"71d6c4f045a79fa40e238382c5f16c70"
+	]
+}
 		},
 		{
 			"ID": "6d93f29c44b5f824bcf5019b03854893",
@@ -842,15 +741,24 @@
 			"StaticFlags": 0,
 			"Target": "a13c8d1b4410b0e753f90c89c2b62a31",
 			"EnableCollision": false,
+			"Flags": 0,
 			"Restitution": 0.25,
 			"LowerLimit": -360.0,
 			"UpperLimit": 360.0,
 			"FreeSpin": true
 		},
 		{
+			"ID": "a13c8d1b4410b0e753f90c89c2b62a31",
+			"TypeName": "FlaxEngine.RigidBody",
+			"ParentID": "f79c3440491c14c2a3ca018c14a5776a",
+			"Name": "InvisBody",
+			"Layer": 3,
+			"OverrideMass": true
+		},
+		{
 			"ID": "5c42b43a435aae18a5ad5eb91b28b021",
 			"TypeName": "FlaxEngine.StaticModel",
-			"ParentID": "0fa36ba044548c845a157f95763acaba",
+			"ParentID": "a13c8d1b4410b0e753f90c89c2b62a31",
 			"Name": "Cube",
 			"Transform": {
 				"Scale": {
@@ -873,109 +781,131 @@
 			}
 		},
 		{
-			"ID": "a13c8d1b4410b0e753f90c89c2b62a31",
-			"TypeName": "FlaxEngine.RigidBody",
-			"ParentID": "f79c3440491c14c2a3ca018c14a5776a",
-			"Name": "InvisBody",
-			"OverrideMass": true
+			"ID": "4969096f4c13c160004d30a4d1b9b043",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "a13c8d1b4410b0e753f90c89c2b62a31",
+			"Name": "BoxCollider",
+			"Transform": {
+				"Scale": {
+					"X": 0.5,
+					"Y": 0.5,
+					"Z": 0.5
+				}
+			},
+			"StaticFlags": 0,
+			"Layer": 3
 		},
 		{
-			"ID": "8f5d897743933adf5bd7d88abc9f65a7",
-			"TypeName": "FlaxEngine.RigidBody",
+			"ID": "28c210d7426f40e15a4a86b4907677ef",
+			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "a13c8d1b4410b0e753f90c89c2b62a31",
-			"Name": "HingeCenter 1",
+			"Name": "Cube 3",
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
 					"Y": 0.0,
 					"Z": 500.0
+				},
+				"Scale": {
+					"X": 2.0,
+					"Y": 1.0,
+					"Z": 4.0
 				}
 			},
 			"StaticFlags": 0,
-			"IsKinematic": true,
-			"EnableGravity": false
-		},
-		{
-			"ID": "e43b8caf4de777a4f9b37b8af5710274",
-			"TypeName": "FlaxEngine.BoxCollider",
-			"ParentID": "8f5d897743933adf5bd7d88abc9f65a7",
-			"IsActive": false,
-			"Name": "BoxCollider",
-			"StaticFlags": 0,
-			"Center": {
-				"X": 0.0,
-				"Y": 0.0000152587890625,
-				"Z": 0.0
-			},
-			"Size": {
-				"X": 5.0,
-				"Y": 5.0,
-				"Z": 5.0
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"DrawModes": 95,
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "6521e29b4ef4231e4cfc8abbfce7a485",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
 			}
 		},
 		{
-			"ID": "3e7cf0d847a34312a496b89e7914c02d",
-			"TypeName": "FlaxEngine.HingeJoint",
-			"ParentID": "8f5d897743933adf5bd7d88abc9f65a7",
-			"Name": "HingeJoint",
+			"ID": "28b8f3474538c0ee2c4adea79c9ffcab",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "28c210d7426f40e15a4a86b4907677ef",
+			"Name": "BoxCollider_3",
+			"Transform": {
+				"Scale": {
+					"X": 0.5,
+					"Y": 1.0,
+					"Z": 0.25
+				}
+			},
 			"StaticFlags": 0,
-			"Target": "57e791164c50a8f0001ad598b851ad5a",
-			"EnableCollision": false,
-			"EnableAutoAnchor": true,
-			"Flags": 1,
-			"Restitution": 0.25,
-			"Stiffness": 100000.0,
-			"Damping": 25000.0,
-			"FreeSpin": true
+			"Size": {
+				"X": 200.0,
+				"Y": 100.0,
+				"Z": 400.0
+			}
 		},
 		{
-			"ID": "d4e2b77c4a47e9acf7dedbb030fe92d6",
-			"TypeName": "FlaxEngine.RigidBody",
+			"ID": "7d2e2b7244db07b31fe2c0b132861be5",
+			"TypeName": "CollisionWithInfo",
+			"ParentID": "28b8f3474538c0ee2c4adea79c9ffcab",
+			"V": {}
+		},
+		{
+			"ID": "71d6c4f045a79fa40e238382c5f16c70",
+			"TypeName": "FlaxEngine.StaticModel",
 			"ParentID": "a13c8d1b4410b0e753f90c89c2b62a31",
-			"Name": "HingeCenter 2",
+			"Name": "Cube 4",
 			"Transform": {
 				"Translation": {
 					"X": 0.0,
 					"Y": 0.0,
 					"Z": -500.0
+				},
+				"Scale": {
+					"X": 2.0,
+					"Y": 1.0,
+					"Z": 4.0
 				}
 			},
 			"StaticFlags": 0,
-			"IsKinematic": true,
-			"EnableGravity": false
-		},
-		{
-			"ID": "c19066e94859fd2427c84c85df2b2d72",
-			"TypeName": "FlaxEngine.BoxCollider",
-			"ParentID": "d4e2b77c4a47e9acf7dedbb030fe92d6",
-			"IsActive": false,
-			"Name": "BoxCollider",
-			"StaticFlags": 0,
-			"Center": {
-				"X": 0.0,
-				"Y": 0.0000152587890625,
-				"Z": 0.0
-			},
-			"Size": {
-				"X": 5.0,
-				"Y": 5.0,
-				"Z": 5.0
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"DrawModes": 95,
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "6521e29b4ef4231e4cfc8abbfce7a485",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
 			}
 		},
 		{
-			"ID": "010113274f0a00fab9a9a8890c6d795d",
-			"TypeName": "FlaxEngine.HingeJoint",
-			"ParentID": "d4e2b77c4a47e9acf7dedbb030fe92d6",
-			"Name": "HingeJoint",
+			"ID": "27a1ae54422e7decf77d8db5187c0d27",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "71d6c4f045a79fa40e238382c5f16c70",
+			"Name": "BoxCollider_4",
+			"Transform": {
+				"Scale": {
+					"X": 0.5,
+					"Y": 1.0,
+					"Z": 0.25
+				}
+			},
 			"StaticFlags": 0,
-			"Target": "66f8cc144c2cefabde5878898a2a837d",
-			"EnableCollision": false,
-			"EnableAutoAnchor": true,
-			"Flags": 1,
-			"Restitution": 0.25,
-			"Stiffness": 100000.0,
-			"Damping": 25000.0,
-			"FreeSpin": true
+			"Size": {
+				"X": 200.0,
+				"Y": 100.0,
+				"Z": 400.0
+			}
+		},
+		{
+			"ID": "53e2645a402e5ee08d075584f43e7052",
+			"TypeName": "CollisionWithInfo",
+			"ParentID": "27a1ae54422e7decf77d8db5187c0d27",
+			"V": {}
 		},
 		{
 			"ID": "6ad7f2c54399bec965bd93b5999eadfb",
@@ -1026,7 +956,7 @@
 			"Target": "790fe0cc4567bbdc09c07d83316ced0d",
 			"EnableCollision": false,
 			"EnableAutoAnchor": true,
-			"Flags": 1,
+			"Flags": 0,
 			"Restitution": 0.25,
 			"Stiffness": 100000.0,
 			"Damping": 25000.0,
@@ -1052,8 +982,9 @@
 				"90e75a0345a52328142e258f34e10246"
 			],
 			"Mass": 12.0,
-			"AngularDamping": 0.125,
+			"AngularDamping": 1.0,
 			"MaxAngularVelocity": 10.0,
+			"MassScale": 2.0,
 			"UseCCD": true
 		},
 		{
@@ -1767,7 +1698,8 @@
 			"ID": "1f25b1784bd9ae5466f65ab53f98e53e",
 			"TypeName": "Game.ConveyorBelt",
 			"ParentID": "f88ba3a74c32d8baaf5530a8fd7a4df4",
-			"V": {}
+			"V": {},
+			"Enabled": false
 		},
 		{
 			"ID": "902a81224069d34b89561981a0d969cc",
@@ -1803,6 +1735,203 @@
 				"Y": 100.0,
 				"Z": 200.0
 			}
+		},
+		{
+			"ID": "dcef30e844bc170b18f8a9a44a92774e",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "8c1ddb5349f8eac7b7ddc58072621b09",
+			"Name": "HingeLeverTest",
+			"Transform": {
+				"Translation": {
+					"X": 539.5132446289063,
+					"Y": 312.28106689453127,
+					"Z": -1029.715576171875
+				}
+			}
+		},
+		{
+			"ID": "1c0b18b144ec2982938e62b958318865",
+			"TypeName": "Game.PercentageController",
+			"ParentID": "dcef30e844bc170b18f8a9a44a92774e",
+			"V": {
+	"hingeJoint": "29de752d40fb3a7e24e70ab8b220bcfd",
+	"hingeRb": "55fea7d9433b0e94fc75b686a59c2c04",
+	"movedActor": "c597a2f446dfeb7d06aad9a4ada2de79",
+	"sliderActorStart": {
+		"X": 0.0,
+		"Y": -100.0,
+		"Z": 0.0
+	},
+	"sliderActorEnd": {
+		"X": 0.0,
+		"Y": 100.0,
+		"Z": 0.0
+	},
+	"torqueBack": 25000.0,
+	"gearRatio": 100.0
+}
+		},
+		{
+			"ID": "17406f5b4d9035ef1072ff98cb79fa09",
+			"TypeName": "FlaxEngine.RigidBody",
+			"ParentID": "dcef30e844bc170b18f8a9a44a92774e",
+			"Name": "SlideHingeRB",
+			"IsKinematic": true
+		},
+		{
+			"ID": "4c5baff44f811c1492d62a9a3c0e4990",
+			"TypeName": "FlaxEngine.SliderJoint",
+			"ParentID": "17406f5b4d9035ef1072ff98cb79fa09",
+			"Name": "SliderJoint",
+			"Transform": {
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.0,
+					"Z": 0.7071068286895752,
+					"W": 0.7071068286895752
+				}
+			},
+			"Target": "c597a2f446dfeb7d06aad9a4ada2de79",
+			"LowerLimit": -100.0,
+			"UpperLimit": 3000.0
+		},
+		{
+			"ID": "c597a2f446dfeb7d06aad9a4ada2de79",
+			"TypeName": "FlaxEngine.RigidBody",
+			"ParentID": "dcef30e844bc170b18f8a9a44a92774e",
+			"Name": "SlidRigidBody",
+			"OverrideMass": true,
+			"Mass": 15.0,
+			"LinearDamping": 0.25,
+			"EnableGravity": false
+		},
+		{
+			"ID": "0fd7b43442a25be80af356951a784d15",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "c597a2f446dfeb7d06aad9a4ada2de79",
+			"Name": "Cube",
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "c1e3ad6141980f2cfd8a29b67718beec",
+			"TypeName": "FlaxEngine.BoxCollider",
+			"ParentID": "c597a2f446dfeb7d06aad9a4ada2de79",
+			"Name": "BoxCollider",
+			"Size": {
+				"X": 102.0,
+				"Y": 102.0,
+				"Z": 102.0
+			}
+		},
+		{
+			"ID": "55fea7d9433b0e94fc75b686a59c2c04",
+			"TypeName": "FlaxEngine.RigidBody",
+			"ParentID": "dcef30e844bc170b18f8a9a44a92774e",
+			"Name": "HingedRigidBody",
+			"Transform": {
+				"Translation": {
+					"X": 259.72479248046877,
+					"Y": 0.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.0,
+					"Y": 0.0,
+					"Z": 0.7071068286895752,
+					"W": 0.7071068286895752
+				}
+			},
+			"OverrideMass": true,
+			"Mass": 15.0,
+			"LinearDamping": 0.5,
+			"EnableGravity": false
+		},
+		{
+			"ID": "d3d3897f4cf21d3b9c93b2a543f53ec9",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "55fea7d9433b0e94fc75b686a59c2c04",
+			"Name": "Cylinder",
+			"Transform": {
+				"Scale": {
+					"X": 2.0,
+					"Y": 2.0,
+					"Z": 2.0
+				}
+			},
+			"Model": "223aa9894e90973780ab508621517526",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "00000000000000000000000000000000",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "dbd1acd24e7773cb9090e3a5f904fb94",
+			"TypeName": "FlaxEngine.MeshCollider",
+			"ParentID": "55fea7d9433b0e94fc75b686a59c2c04",
+			"Name": "MeshCollider",
+			"CollisionData": "21bee4274d4f7b46270069b441b1beb8"
+		},
+		{
+			"ID": "377ee9dc456c8ab42d3c4a808604d59b",
+			"TypeName": "FlaxEngine.RigidBody",
+			"ParentID": "dcef30e844bc170b18f8a9a44a92774e",
+			"Name": "HingeRB",
+			"Transform": {
+				"Translation": {
+					"X": 259.72479248046877,
+					"Y": 0.0,
+					"Z": 0.0
+				}
+			},
+			"OverrideMass": true,
+			"Mass": 15.0,
+			"LinearDamping": 0.5,
+			"IsKinematic": true
+		},
+		{
+			"ID": "29de752d40fb3a7e24e70ab8b220bcfd",
+			"TypeName": "FlaxEngine.HingeJoint",
+			"ParentID": "377ee9dc456c8ab42d3c4a808604d59b",
+			"Name": "HingeJoint",
+			"Target": "55fea7d9433b0e94fc75b686a59c2c04",
+			"TargetAnchorRotation": {
+				"X": 0.0,
+				"Y": 0.0,
+				"Z": 0.7071067690849304,
+				"W": 0.7071067690849304
+			},
+			"EnableCollision": false,
+			"Flags": 1,
+			"Stiffness": 2000.0,
+			"Damping": 10.0,
+			"LowerLimit": 0.0,
+			"UpperLimit": 180.0
+		},
+		{
+			"ID": "3b3430c44c5624f2ba8493be9980c2a0",
+			"TypeName": "Game.HardRangeHingeLimit",
+			"ParentID": "29de752d40fb3a7e24e70ab8b220bcfd",
+			"V": {
+	"lowerLimit": -180.0,
+	"upperLimit": 0.0,
+	"hingeJoint": "29de752d40fb3a7e24e70ab8b220bcfd"
+}
 		},
 		{
 			"ID": "28553d634087c67c711ebd96080482aa",
@@ -4087,7 +4216,7 @@
 			"TypeName": "Game.CheeseVisual",
 			"ParentID": "6332a8b6480a04c9e02594aa5e78f083",
 			"V": {
-	"MaterialNorm": "3d9b3a894c3b286d13391c8c0f67733c",
+	"MaterialNorm": "0b387be24933f967dda0e9ab7739f339",
 	"MaterialHurt": "6741ae6c4dd6cc52fb78fd8671f7acbf",
 	"cheeseModel": "e9146273423a7727385f65a8ab244fa8"
 }
@@ -4102,7 +4231,7 @@
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "00000000000000000000000000000000",
+						"Material": "0b387be24933f967dda0e9ab7739f339",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true

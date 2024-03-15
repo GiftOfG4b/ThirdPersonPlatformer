@@ -10,19 +10,29 @@ namespace Game;
 /// 
 /// </summary>
 public class FakeHinge : Script
-{
-    RigidBody hingeRigidBody;
+{// rename as double hinge?
+    public RigidBody hingeRigidBody;
     public CollisionWithInfo[] colliders;
 
-    public Vector3 rotationAxis;
+    //public Vector3 rotationAxis;
 
-    float angle;
+    //float angle;
+    public Actor[] insideActors;//child objects of the double hinge, that keep their roation despite the parents rotation
+    Quaternion[] insideActRot;
 
 
     /// <inheritdoc/>
     public override void OnStart()
     {
         // Here you can add code that needs to be called when script is created, just before the first game update
+        //hingeRigidBody 
+        insideActRot = new Quaternion[insideActors.Length];
+        int i = 0;
+        foreach (var insideActor in insideActors){
+            insideActRot[i] = insideActor.Orientation;
+            i++;
+        }
+        
     }
     
     /// <inheritdoc/>
@@ -46,20 +56,28 @@ public class FakeHinge : Script
     }
 
     /// <inheritdoc/>
-    public override void OnUpdate()
+    public override void OnFixedUpdate()
     {
-        // Here you can add code that needs to be called every frame
-
-        //twist hinge colliders to keep same orientation despite rotation
+        // Rotate inner hinges to keep same orientation (always vertical) // seems preformance intense
+        for (int i = 0; i < insideActRot.Length; i++){
+            insideActors[i].Orientation = insideActRot[i];
+        }
     }
+
 
     private void OnHingeHit(Collision collision)
     {
 
         Vector3 collisionPoint = collision.Contacts[0].Point;
         Vector3 collisionDir = collision.Contacts[0].Normal;
-
-        hingeRigidBody.AddForceAtPosition(collisionDir,collisionPoint);
+        //take mass of colliding body into account for force magnitude
+        if( collision.OtherActor.AttachedRigidBody){
+            float otherRbMass = collision.OtherActor.AttachedRigidBody.Mass;
+            
+            if (hingeRigidBody){
+                hingeRigidBody.AddForceAtPosition(-otherRbMass*collisionDir,collisionPoint);            
+            }
+        }
         
     }
 }
