@@ -102,6 +102,7 @@ public class MovingPlatformOnHit : Script
         //if countdownSinceLastTriggered>0
         //if hit by cheese
         countDownSinceLastHit = momentumTime;
+        //add event for clock animation (goes up to max before countdown from momentum time)
     }
 
 

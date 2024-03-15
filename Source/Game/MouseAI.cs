@@ -28,6 +28,7 @@ public class MouseAI : Script, IDamageable
     public Actor defaultPathHolder;
 
     Vector3[] waypoints;
+    Vector3[] tempPath;
 
     int targetWaypointIndex;
     Vector3 targetWaypoint;
@@ -68,7 +69,7 @@ public class MouseAI : Script, IDamageable
     /// <inheritdoc/>
     public override void OnUpdate()
     {
-        // mouse behaviour here
+        // mouse behaviour here, simple state machine
         if (mouseState == HealthState.Normal)
         {
             FollowPath();
@@ -80,6 +81,19 @@ public class MouseAI : Script, IDamageable
                 
             }
             else{
+                //recover (get up anim)
+                //check if path reachable to default path (by definition of path if any point reachable to default path then all points reachable)
+                //otherwise pathfind
+                var currentPos = this.Actor.Position;
+                var targetPos = waypoints[0];
+                if(!Navigation.FindPath(currentPos, targetPos, out tempPath)){//if cant find path, create new one where the mouse is
+                    
+                }
+
+                else{
+                    
+                }
+                
                 mouseState = HealthState.Normal;
             }
         }
@@ -91,6 +105,12 @@ public class MouseAI : Script, IDamageable
     }
 
     void FollowPath() {
+
+        //possible note: for future ref, if needs to bounce and slide
+        //project point on navmesh for bounce 
+        //slide, release navmesh when arriving at top of slide before sliding down    
+        //at bottom, climb if too steep, otherwise pathfind around
+
         //transform.position = waypoints [0];
 
         

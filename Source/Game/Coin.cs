@@ -24,6 +24,8 @@ public class Coin : Script
     {
         // Here you can add code that needs to be called when script is created, just before the first game update
         coinTarget = Actor;//placed on the coin itself, not on area entered 
+
+        //todo: in total score; add method that can be called at start by all coins in scene, that adds their existence to the total possible
     }
     
     /// <inheritdoc/>

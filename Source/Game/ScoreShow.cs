@@ -11,7 +11,7 @@ namespace Game;
 public class ScoreShow : Script
 {
     [Tooltip("The current level max score")]
-    public int TotalScore{ get; set; }
+    public int totalScore = 0;
     int score = 0;//player score/ number of stars found
 
     [Tooltip("Reference to the player score visual control")]
@@ -56,4 +56,11 @@ public class ScoreShow : Script
         score += pickupAmount;
         scoreRender.Text = ": "+ score.ToString();//?how to do
     }
+
+    void TotalScoreChange(int pickupAmount){
+        totalScore += pickupAmount;
+        //render score once all are added (possibly add to score render each time)
+    }
+
+    
 }

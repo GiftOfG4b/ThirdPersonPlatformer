@@ -120,6 +120,8 @@ public class CheeseBounce : Script
                     rigidBody.LinearVelocity+=avgNormal*verticalSpeed;
 
                     
+                    //currently, no force even added, the collision is just regular
+
                     // if (collision.OtherActor.AttachedRigidBody){//if rigidbody attached to other collider
                     //     //check if theres not better way for this
                     //     collision.OtherActor.AttachedRigidBody.AddForce(-(Vector3.Project(rigidBody.LinearVelocity, avgNormal)+avgNormal*verticalSpeed)*rigidBody.Mass,ForceMode.Impulse);
@@ -238,7 +240,7 @@ public class CheeseBounce : Script
 
             Vector3 velocInDir = Vector3.Project(rigidBody.LinearVelocity, movementDirection);
 
-            if(velocInDir.LengthSquared<750f*750f){
+            if(velocInDir.LengthSquared<750f*750f){//max allowed horizontal speed provided by input
                 rigidBody.AddForce(movementDirection*speedForceMag);
             }
 
