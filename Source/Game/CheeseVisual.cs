@@ -13,7 +13,7 @@ public class CheeseVisual : Script
 {
     //public SceneAnimationPlayer cheeseHealthPlayer; //flashing red or twirling stars above
 
-    public Material cheeseMat;
+    //public Material cheeseMat;
 
     public MaterialBase MaterialNorm;
     public MaterialBase MaterialHurt;
@@ -34,7 +34,7 @@ public class CheeseVisual : Script
     public override void OnStart()
     {
         // Here you can add code that needs to be called when script is created, just before the first game update
-        cheeseMat = (Material) cheeseModel.GetMaterial(0);//material base to material
+        //cheeseMat = (Material) cheeseModel.GetMaterial(0);//material base to material
         
     }
     

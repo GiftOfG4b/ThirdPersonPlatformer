@@ -1768,7 +1768,8 @@
 		"Z": 0.0
 	},
 	"torqueBack": 25000.0,
-	"gearRatio": 100.0
+	"gearRatio": 100.0,
+	"hingeColliders": []
 }
 		},
 		{
@@ -1793,7 +1794,7 @@
 			},
 			"Target": "c597a2f446dfeb7d06aad9a4ada2de79",
 			"LowerLimit": -100.0,
-			"UpperLimit": 3000.0
+			"UpperLimit": 500.0
 		},
 		{
 			"ID": "c597a2f446dfeb7d06aad9a4ada2de79",
@@ -1814,7 +1815,7 @@
 			"Buffer": {
 				"Entries": [
 					{
-						"Material": "00000000000000000000000000000000",
+						"Material": "598db84b4029dd8eda18a28d53a48efb",
 						"ShadowsMode": 3,
 						"Visible": true,
 						"ReceiveDecals": true
@@ -1920,8 +1921,8 @@
 			"Flags": 1,
 			"Stiffness": 2000.0,
 			"Damping": 10.0,
-			"LowerLimit": 0.0,
-			"UpperLimit": 180.0
+			"LowerLimit": -180.0,
+			"UpperLimit": 0.0
 		},
 		{
 			"ID": "3b3430c44c5624f2ba8493be9980c2a0",
