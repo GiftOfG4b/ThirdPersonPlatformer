@@ -1,0 +1,140 @@
+{
+	"ID": "195db3a14e48799a00b0cca6c6d968e7",
+	"TypeName": "FlaxEngine.Prefab",
+	"EngineBuild": 6407,
+	"Data": [
+	{
+		"ID": "fd2bf29c42f179dc926959b5854f9e2e",
+		"TypeName": "FlaxEngine.EmptyActor",
+		"ParentID": "00000000000000000000000000000000",
+		"Name": "Piston"
+	},
+	{
+		"ID": "dfb88c2c45a0d45b67010bb1bec354e9",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "fd2bf29c42f179dc926959b5854f9e2e",
+		"Name": "PipeTube",
+		"Model": "223aa9894e90973780ab508621517526",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "f6a65865458c078256b7669629573908",
+		"TypeName": "FlaxEngine.MeshCollider",
+		"ParentID": "dfb88c2c45a0d45b67010bb1bec354e9",
+		"Name": "MeshCollider",
+		"Transform": {
+			"Scale": {
+				"X": 0.5,
+				"Y": 0.5,
+				"Z": 0.5
+			}
+		},
+		"CollisionData": "21bee4274d4f7b46270069b441b1beb8"
+	},
+	{
+		"ID": "9e1ff71642fe6ff27ae8219c8309ed5e",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "fd2bf29c42f179dc926959b5854f9e2e",
+		"Name": "MovingShaft",
+		"Transform": {
+			"Scale": {
+				"X": 0.75,
+				"Y": 2.0,
+				"Z": 0.75
+			}
+		},
+		"StaticFlags": 8,
+		"Model": "223aa9894e90973780ab508621517526",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "92cb86db4e234bd0bb6fa0830f8771c4",
+		"TypeName": "FlaxEngine.MeshCollider",
+		"ParentID": "9e1ff71642fe6ff27ae8219c8309ed5e",
+		"Name": "MeshCollider",
+		"Transform": {
+			"Scale": {
+				"X": 0.5,
+				"Y": 0.5,
+				"Z": 0.5
+			}
+		},
+		"StaticFlags": 8,
+		"CollisionData": "21bee4274d4f7b46270069b441b1beb8"
+	},
+	{
+		"ID": "c581ceff41223984441d0daea486a42f",
+		"TypeName": "FlaxEngine.StaticModel",
+		"ParentID": "9e1ff71642fe6ff27ae8219c8309ed5e",
+		"Name": "ShaftCap",
+		"Transform": {
+			"Translation": {
+				"X": 0.0,
+				"Y": 37.5,
+				"Z": 0.0
+			},
+			"Scale": {
+				"X": 1.3333333730697632,
+				"Y": 0.25,
+				"Z": 1.3333333730697632
+			}
+		},
+		"StaticFlags": 8,
+		"Model": "223aa9894e90973780ab508621517526",
+		"Buffer": {
+			"Entries": [
+				{
+					"Material": "00000000000000000000000000000000",
+					"ShadowsMode": 3,
+					"Visible": true,
+					"ReceiveDecals": true
+				}
+			]
+		}
+	},
+	{
+		"ID": "6357d188439dfdbff882bf82e68f2304",
+		"TypeName": "FlaxEngine.MeshCollider",
+		"ParentID": "c581ceff41223984441d0daea486a42f",
+		"Name": "MeshCollider",
+		"Transform": {
+			"Scale": {
+				"X": 0.5,
+				"Y": 0.5,
+				"Z": 0.5
+			}
+		},
+		"StaticFlags": 8,
+		"CollisionData": "21bee4274d4f7b46270069b441b1beb8"
+	},
+	{
+		"ID": "651389764fc00df8f2d767821434f9b5",
+		"TypeName": "FlaxEngine.SceneAnimationPlayer",
+		"ParentID": "fd2bf29c42f179dc926959b5854f9e2e",
+		"Name": "PistonSceneAnim",
+		"Animation": "85d982574aafcef4f8bae7a94ef5ee3c",
+		"Speed": 2.0,
+		"Loop": true,
+		"PlayOnStart": true,
+		"UsePrefabObjects": true
+	}
+]
+}

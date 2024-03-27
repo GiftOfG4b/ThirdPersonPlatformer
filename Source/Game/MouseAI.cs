@@ -9,11 +9,15 @@ namespace Game;
 /// </summary>
 public class MouseAI : Script, IDamageable
 {
-    public Actor platformActor;
+    public Actor mouseActor;
 
+    CharacterController mouseCC;
+    
     enum HealthState
     {
         Normal,
+        Transition,
+        Panic,
         Weakened,
         Dead
     }
@@ -26,7 +30,6 @@ public class MouseAI : Script, IDamageable
 
     Vector3[] defaultWayPoints;
     public Actor defaultPathHolder;
-
     Vector3[] waypoints;
     Vector3[] tempPath;
 
@@ -40,13 +43,20 @@ public class MouseAI : Script, IDamageable
     public float recoveryTime = 5f;
     float timeLastHit;
 
+    float timeSinceLastCheck = 0;
+    float timeUntilCheck = 5f;
+    int randDir = 1;
+
+
+
     /// <inheritdoc/>
     public override void OnStart()
     {
+        mouseCC = (CharacterController) mouseActor;
         // Here you can add code that needs to be called when script is created, just before the first game update
         defaultWayPoints = new Vector3[defaultPathHolder.ChildrenCount];
 
-        for (int i = 0; i< waypoints.Length; i++){
+        for (int i = 0; i< defaultWayPoints.Length; i++){
             defaultWayPoints[i] = defaultPathHolder.GetChild(i).Position;
         }
         waypoints = defaultWayPoints;
@@ -85,17 +95,61 @@ public class MouseAI : Script, IDamageable
                 //check if path reachable to default path (by definition of path if any point reachable to default path then all points reachable)
                 //otherwise pathfind
                 var currentPos = this.Actor.Position;
-                var targetPos = waypoints[0];
-                if(!Navigation.FindPath(currentPos, targetPos, out tempPath)){//if cant find path, create new one where the mouse is
-                    
+                var targetPos = defaultWayPoints[0];
+                bool foundPath = Navigation.FindPath(currentPos, targetPos, out waypoints);//err: create navmesh to get waypoints this way
+                if(!foundPath){//if cant find path, create new one where the mouse is
+                    //waypoints = PanicPath();
+                    mouseState = HealthState.Panic; //start running around
                 }
-
-                else{
-                    
+                else{//path put in waypoints
+                    //followpath, until end, then change path back to normal
+                    mouseState = HealthState.Transition;
                 }
                 
+                
+            }
+        }
+        else if (mouseState == HealthState.Transition)
+        {
+            //at the end of path instead of looping back, change path to default
+            if (targetWaypointIndex == waypoints.Length-1 && mouseActor.Position == targetWaypoint)
+            {//clunky and redundant, find way to optimize
+                waypoints = defaultWayPoints;
                 mouseState = HealthState.Normal;
             }
+            else{
+                FollowPath();
+            }
+        }
+        else if (mouseState == HealthState.Panic)
+        {
+            //panic state, no path, so just run and react (spin in circles while just going forward)
+            //if stuck/about to hit something, rotate
+            
+
+            
+            //if ray cast hit in front or if raycast shows no floor ahead
+            if (Physics.LineCast(Actor.Position, Actor.Position+mouseCC.Transform.Forward*_speed, out RayCastHit hit)||Physics.LineCast(Actor.Position+mouseCC.Transform.Forward, Actor.Position+mouseCC.Transform.Forward+2f*mouseCC.Transform.Down, out hit))
+            {
+                mouseCC.RotateAround(mouseCC.Position,-gravityDir, randDir*Time.DeltaTime*turnSpeed*2);//angle
+            }
+            else{
+                //if enough time has passed, change dir at random
+                
+                mouseCC.RotateAround(mouseCC.Position,-gravityDir,randDir*Time.DeltaTime*turnSpeed);//angle
+                mouseCC.Move(mouseCC.Transform.Forward * _speed);
+
+                if (timeSinceLastCheck>timeUntilCheck)
+                {
+                    timeSinceLastCheck = 0;
+                    randDir = new Random().Next(0,2)*2 - 1;
+                }
+                else{
+                    timeSinceLastCheck +=Time.DeltaTime;
+                }
+            }
+            
+
         }
         else{
             //todo: death animation instead
@@ -103,7 +157,6 @@ public class MouseAI : Script, IDamageable
         }
 
     }
-
     void FollowPath() {
 
         //possible note: for future ref, if needs to bounce and slide
@@ -117,7 +170,7 @@ public class MouseAI : Script, IDamageable
         //transform.LookAt(targetWaypoint);
         
             
-        if (platformActor.Position == targetWaypoint){
+        if (mouseActor.Position == targetWaypoint){
             //prevWayPoint = targetWaypoint;
             targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
             targetWaypoint = waypoints[targetWaypointIndex];
@@ -126,7 +179,7 @@ public class MouseAI : Script, IDamageable
         
         else{
             //Debug.Log(time/timeToReach);
-            platformActor.Position = Vector3.MoveTowards(platformActor.Position,targetWaypoint, _speed * Time.DeltaTime);
+            mouseActor.Position = Vector3.MoveTowards(mouseActor.Position,targetWaypoint, _speed * Time.DeltaTime);
             
         }
 
@@ -147,8 +200,8 @@ public class MouseAI : Script, IDamageable
         //float angle = Mathf.MoveTowardsAngle (platformActor.Transform.eulerangle.y, targetAngle, turnSpeed * Time.DeltaTime);
         //transform.eulerAngles = Vector3.up * angle;      
 
-        Quaternion quatTarget = platformActor.LookingAt(lookTarget);
-        platformActor.Orientation = Quaternion.Lerp(platformActor.Orientation,quatTarget,Time.DeltaTime*turnSpeed);
+        Quaternion quatTarget = mouseActor.LookingAt(lookTarget,-gravityDir);
+        mouseActor.Orientation = Quaternion.Lerp(mouseActor.Orientation,quatTarget,Time.DeltaTime*turnSpeed);//todo: compare slerp to lerp
 
         //other part, only height(x? component)
 
@@ -159,14 +212,15 @@ public class MouseAI : Script, IDamageable
         //Vector3 collisionPoint = collision.Contacts[0].Point;
         //Vector3 collisionDir = collision.Contacts[0].Normal;
         
-        CheeseHealth cheeseHit =collision.OtherActor.GetScript<CheeseHealth>();
-
+        CheeseHealth cheeseHit =collision.OtherActor.Parent.GetScript<CheeseHealth>();
+        Debug.Log("hit!; " + collision.Contacts[0].Normal);
+        Debug.Log("downCheck:"+ Vector3.Dot(collision.Contacts[0].Normal,-gravityDir));
         if(cheeseHit!=null){
             //hurt the cheese if not vertical hit, otherwise hurt mouse
-            if(Vector3.Dot(collision.Contacts[0].Normal,gravityDir)>0.625f){
+            if(Vector3.Dot(collision.Contacts[0].Normal,-gravityDir)<0.625f){
                 cheeseHit.TakeHit(collision.Contacts[0].Normal, collision.Contacts[0].Point);
             }
-            else{
+            else{//err: collision not working
                 TakeHit(collision.Contacts[0].Normal, collision.Contacts[0].Point);
             }
         }

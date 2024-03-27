@@ -33,7 +33,8 @@ public class PercentageController : Script
 
     //float percentage;
 
-    public CollisionWithInfo[] colliders;
+    //public CollisionWithInfo[] hingeColliders;
+    public Collider[] hingeColliders;
 
 
     //simply return to initial post, as if having const force (== constant acceleration)
@@ -83,9 +84,9 @@ public class PercentageController : Script
     public override void OnEnable()
     {
         // Here you can add code that needs to be called when script is enabled (eg. register for events)
-        foreach (var collisioner in colliders)
+        foreach (var collisioner in hingeColliders)
         {
-            collisioner.triggered += OnHingeHit;
+            collisioner.CollisionEnter += OnHingeHit;
         }
     }
 
@@ -93,9 +94,9 @@ public class PercentageController : Script
     public override void OnDisable()
     {
         // Here you can add code that needs to be called when script is disabled (eg. unregister from events)
-        foreach (var collisioner in colliders)
+        foreach (var collisioner in hingeColliders)
         {
-            collisioner.triggered -= OnHingeHit;
+            collisioner.CollisionEnter -= OnHingeHit;
         }
     }
 
@@ -140,12 +141,20 @@ public class PercentageController : Script
     }
 
     private void OnHingeHit(Collision collision)
-    {
+    {//make rotation easier: if hit at an angle, add force as if perpendicular
 
         Vector3 collisionPoint = collision.Contacts[0].Point;
         Vector3 collisionDir = collision.Contacts[0].Normal;
 
         //hingeRigidBody.AddForceAtPosition(collisionDir,collisionPoint);
+        Vector3 collisionOtherVel = collision.OtherVelocity;
+        //hingeRigidBody.AddForceAtPosition(collisionDir,collisionPoint);
+        // float forceMag = 10f;
+        // if (MathF.Abs(Vector3.Dot(collisionDir,collisionOtherVel))>.5f){
+        //     Debug.Log("hingeHit");
+        //     //add force at collision point in direction of cross product of rotation axis and normal
+        //     hingeRb.AddForceAtPosition(Vector3.Cross(rotationAxis,collisionDir)*forceMag,collisionPoint, ForceMode.Impulse);
+        // }
         
     }
     //two version required: one that lets percentage get hit and one that doesnt (option: dont connect event for one that doesnt)
@@ -154,8 +163,7 @@ public class PercentageController : Script
 
         Vector3 collisionPoint = collision.Contacts[0].Point;
         Vector3 collisionDir = collision.Contacts[0].Normal;
-
-        //hingeRigidBody.AddForceAtPosition(collisionDir,collisionPoint);
+        
         
     }
 }
